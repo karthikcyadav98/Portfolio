@@ -108,11 +108,55 @@ main {
 	}
 }
 
+//My works
+.projects {
+	display: grid;
+	grid-gap: 0.7rem;
+	grid-template-columns: repeat(3, 1fr);
+
+	img {
+		width: 100%;
+		height: 150px;
+		border: 3px solid #fff;
+
+		&:hover {
+			opacity: 0.5;
+			border-color: $secondary-color;
+			@include easeOut;
+		}
+	}
+}
+
+//Button Styles
+.btn {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin-bottom: 0.3rem;
+
+	&:hover {
+		background: $secondary-color;
+		color: set-text-color($secondary-color);
+	}
+}
+
+.btn-dark {
+	@extend .btn;
+	background: darken($primary-color, 50);
+	color: set-text-color(darken($primary-color, 50));
+}
+
+.btn-light {
+	@extend .btn;
+	background: lighten($primary-color, 50);
+	color: set-text-color(lighten($primary-color, 50));
+}
+
 #main-footer {
 	text-align: center;
 	padding: 1rem;
 	background: darken($primary-color, 10);
-	color: set-text-color($primary-color);
+	color: set-text-color(darken($primary-color, 10));
 	height: 60px;
 }
 
